@@ -6,11 +6,9 @@ public class App {
         Azione prelevaMonete = new Azione(s, false);
 
         inserisciMonete.start();
-        inserisciMonete.run();
-        inserisciMonete.join();
-
         prelevaMonete.start();
-        prelevaMonete.run();
+        
+        inserisciMonete.join();
         prelevaMonete.join();
     
         System.out.println(Salvadanaio.monete);
